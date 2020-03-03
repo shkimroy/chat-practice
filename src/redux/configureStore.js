@@ -2,13 +2,13 @@ import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { routerMiddleware } from "react-router-redux";
 import { connectRouter } from "connected-react-router";
-import createHistory from "history/createBrowserHistory";
 import { composeWithDevTools } from "redux-devtools-extension";
-import users from "./modules/user";
+import user from "./modules/user";
+import room from "./modules/room";
 
 const env = process.env.NODE_ENV;
 
-const history = createHistory();
+const history = require("history").createBrowserHistory();
 
 const middlewares = [thunk, routerMiddleware(history)];
 
@@ -18,7 +18,8 @@ if (env === 'development') {
 }
 
 const reducer = combineReducers({
-  users,
+  user,
+  room,
   router: connectRouter(history)
 });
 
