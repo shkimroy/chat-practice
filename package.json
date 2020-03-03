@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.1.2",
     "body-parser": "^1.19.0",
     "connected-react-router": "^6.7.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "history": "^4.10.1",
     "http-proxy-middleware": "^1.0.1",
